@@ -1,0 +1,58 @@
+ {% extends 'base.html'%}
+
+{% block content %}
+  <div class="testbox">
+  <form action="/input/" method="post">
+    {%csrf_token%}
+    <div class="banner">
+      <h1>Calculate Pixels</h1>
+    </div>
+    <p>In this program we will calculates pixel coordinate values for an image that is to be displayed on a two-dimensional surface given the dimensions of the image and the corner points of the image as it is to be displayed.</p>
+    <br/>
+    <fieldset>
+      <legend>Input Values</legend>
+      <div class="colums">
+        <div class="item">
+          <label for="firstcoord">First-pair<span>*</span></label>
+          <input id="firstcoord" type="text" name="firstcoord" required/>
+        </div>
+        <div class="item">
+          <label for="secondcoord">Second-pair<span>*</span></label>
+          <input id="secondcoord" type="text" name="secondcoord" required/>
+        </div>
+        <div class="item">
+          <label for="thirdcoord">Third-pair<span>*</span></label>
+          <input id="thirdcoord" type="text"   name="thirdcoord" required/>
+        </div>
+        <div class="item">
+          <label for="fourthcoord">Fourth-pair<span>*</span></label>
+          <input id="fourthcoord" type="tel"   name="fourthcoord" required/>
+        </div>
+        <div class="item">
+          <label for="height">Height<span>*</span></label>
+          <input id="height" type="text"   name="height" required/>
+        </div>
+        <div class="item">
+          <label for="width">Width<span>*</span></label>
+          <input id="width" type="text"   name="width" required/>
+        </div>
+    </fieldset>
+    <div class="btn-block">
+    <button href="/">Solution</button>
+    </div>
+  </form>
+  </div>
+  <div class="testbox wrap">
+    <div>
+      <table>
+        {% for row in SOLUTION %}
+          <tr>
+            {% for entry in  row %}
+              <td>{{ entry }}</td>
+            {% endfor %}
+          </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  {% endblock content %}
