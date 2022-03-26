@@ -6,7 +6,7 @@ For example, if an image is defined by a 3x3 grid of pixel values, and the (x, y
 #### Prerequisites
 Ensure the following is installed to your system:
 
-- Python >= 3.7 or greater
+- Python >= 3.7
 - Python `Pip` the package manager.
 - Docker
 
@@ -15,7 +15,7 @@ Ensure the following is installed to your system:
 #### Installing requirements through a virtual environment
 
 ```
-$ python -m pip install --user virtualenv
+$ python3 -m pip install --user virtualenv
 $ python3 -m venv env
 $ source env/bin/activate
 (env)$ pip install -r requirements.txt
