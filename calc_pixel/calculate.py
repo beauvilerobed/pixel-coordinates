@@ -25,7 +25,7 @@ def get_coordinates(query_dict):
     }
 
     Output:
-    Type: list
+    Type: list[list[list]
     [
 
     [[1.0, 3.0], [2.0, 3.0], [3.0, 3.0]],
@@ -64,7 +64,7 @@ def process_query_dict(query_dict):
     }
 
     Output:
-    Type: list[list]
+    Type: list[list[tuple]]
 
     [   
         # 4 coordinates
@@ -136,7 +136,7 @@ def return_coords(point1, point2, dim):
     
 def prelif(point1, point2, dim):
     """
-    Function to preliferate or a grid starting from the upper 
+    Function to preliferate or generate a grid starting from the upper 
     left corner point;
 
     Example
@@ -187,7 +187,7 @@ def get_points(coords):
     Example:
 
     Input:
-    Type: list[tuple]
+    Type: list[list[tuple]]
     [   
         # 4 coordinates
         [(1.0,1.0)],
