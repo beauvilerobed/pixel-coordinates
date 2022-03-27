@@ -103,14 +103,18 @@ def return_coords(point1, point2, dim):
     Example:
 
     Input:
-    Type: list[list]
-    [   
+    
+    Type: 
+        point1: list[floats], point2: list[float], dim: list[int]
+        
         # first point
         [1.0, 1.0],
         
         # point furthest away from first point
         [3.0, 3.0]
-    ] 
+        
+        # dimensions
+        [3, 3]
 
     Output:
     Type:     list[list[list]]
@@ -142,14 +146,18 @@ def prelif(point1, point2, dim):
     Example
 
     Input:
-    Type: list[list]
-        [   
-        # upper left corner point
-        [1.0, 3.0],
+    
+    Type: 
+        point1: list[floats], point2: list[float], dim: list[int]
         
-        # lower right corner point
-        [3.0, 1.0]
-    ] 
+        # first point
+        [1.0, 1.0],
+        
+        # point furthest away from first point
+        [3.0, 3.0]
+        
+        # dimensions
+        [3, 3]
 
     Output:
     list[list[list]]
@@ -202,14 +210,14 @@ def get_points(coords):
 
 
     Output:
-    Type: list[list]
-    [   
+    Type: tuple[list]
+    (
         # first point
         [1.0, 1.0],
         
         # point furthest away from first point
         [3.0, 3.0]
-    ]
+     )
 
     """
     point = np.array(coords[0])
